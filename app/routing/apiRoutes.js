@@ -17,7 +17,7 @@ for (var i = 0 ; i <req.body.scores.length;i++ ){
  
     
     var t = getClosestMatch(req.body)
-    
+    friendsArray[t].scoreToMatch =  req.body.scores;
     res.send(friendsArray[t]);
 
 
@@ -81,8 +81,8 @@ function getClosestMatch(argRequest) {
         value: 0
     };
     for (var i = 0; i < keys.length; i++) {
-       console.log(`value: ${parseFloat(keys[i][1].toFixed(10))} is greater than Value: ${parseFloat(closest.value.toFixed(10))}  =` + (parseFloat(keys[i][1]) > parseFloat(closest.value)));
-        if (parseFloat(keys[i][1].toFixed(10)) > parseFloat(closest.value.toFixed(10))) {
+       console.log(`value: ${parseFloat(keys[i][1])} is greater than Value: ${parseFloat(closest.value)}  =` + (parseFloat(keys[i][1]) > parseFloat(closest.value)));
+        if (parseFloat(keys[i][1]) > parseFloat(closest.value)) {
             closest.name = keys[i][0],
                 closest.value = keys[i][1]
 
