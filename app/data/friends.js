@@ -40,8 +40,8 @@ var scores = [];
 var obj = {};
 
 for (var i = 0; i < argNumber; i++) {
-name = 'n' + i;
-photo = `https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/${name}.jpg`
+name = 'Rnd Generated Person n' + i;
+photo = `https://dummyimage.com/400x300/000/fff.jpg&text=`+name;
 ans1 = Math.floor((Math.random() * 5)+1);
 ans2 = Math.floor((Math.random() * 5)+1);
 ans3 = Math.floor((Math.random() * 5)+1);
@@ -62,7 +62,7 @@ friends.push(obj);
 
 
 }
-addFriends(40);
+addFriends(20);
 
 
 
